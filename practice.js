@@ -1,20 +1,25 @@
-
 console.log(peopleInSpace)
 
 const numberOfAstrosInSpace = (data) => {
   //return the number of astronauts in space right now, using the data
+  return data.number
 }
 console.log("number of people in space: ", numberOfAstrosInSpace(peopleInSpace))
 
 
 const astroNames = (data) => {
   // return an array containing the name strings of the astronauts in space
+    let people = data.people.map((person) => {
+        return person.name
+    })
+    return people
 }
 console.log("names of people in space: ", astroNames(peopleInSpace))
 
 
 const allInSameCraft = (data) => {
   // return a boolean that specifies whether all astronauts are in the same space craft
+    
 }
 console.log("same craft? ", allInSameCraft(peopleInSpace))
 
@@ -27,6 +32,7 @@ console.log("successful response? ", successfulResponse(peopleInSpace))
 
 const wheresJoe = (data) => {
   // return "in space!" if Joe Acaba is in space right now. Otherwise, return "dunno."
+
 }
 console.log("where's Joe? ", wheresJoe(peopleInSpace))
 
